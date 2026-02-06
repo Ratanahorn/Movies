@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../public/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body class="bg-gray-900">
+    <nav class="border-b border-gray-300 py-1.5 sticky top-0 bg-gray-900/90 z-96">
+      <div class="w-[98%] sm:w-4/5 m-auto flex justify-between">
+        <div class=" h-9 sm:h-14 items-center flex">
+          <img
+            class="h-full object-cover rounded-xl"
+            src="https://i.pinimg.com/736x/31/0f/1f/310f1f41e7618c6f8ed20c746af5e461.jpg"
+            alt=""
+          />
+          <p class="font-bold text-[13px] sm:text-3xl text-gray-100">Movies</p>
+        </div>
+        <div class="flex flex-row sm:flex-row items-center">
+        <div id="mobile" class="hidden sm:block">
+          <ul class="flex gap-6 text-[13px] sm:text-[17px] text-gray-400 h-full items-center">
+            <li class="hover:cursor-pointer hover:text-gray-100">Trending</li>
+            <li class="hover:cursor-pointer hover:text-gray-100">Top Rate</li>
+            <li class="hover:cursor-pointer hover:text-gray-100">Upcoming</li>
+          </ul>
+        </div>
+        <div id="menuBtn" class="block justify-center sm:hidden text-white text-2xl cursor-pointer ">
+          <i class="fa-solid fa-bars text-md"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class=" w-[98%] md:w-4/5 m-auto py-20">
+      <h1 class="text-center text-gray-100 text-xl sm:text-4xl font-bold my-5">
+        Discover Your Next favourite Movies
+      </h1>
+      <h1 class="text-[10px] sm:text-[17px] text-center text-gray-100">
+        Search through thousands of Movies and TV shows
+      </h1>
+      <div
+        class="w-[90%] sm:w-[40%] mx-auto my-5 rounded-[5px] py-2.5 border border-white flex"
+      >
+        <input
+        id="search"
+          type="text"
+          class="placeholder:text-gray-300 outline-none border-none text-white w-11/12 px-4"
+          placeholder="Search"
+        />
+        <span class="text-white w-[10%] flex justify-center items-center"
+          ><i class="fa-solid fa-magnifying-glass"></i
+        ></span>
+      </div>
+    </div>
+    <div class="w-full h-px bg-gray-200"></div>
+
+    <div class="w-full sm:w-[80%] pt-5 m-auto">
+      <div class="flex flex-col sm:flex-row gap-5 sm:items-center">
+        <span class="text-white">filter by:</span>
+        <ul class=" grid grid-cols-3  sm:flex gap-5" id="filter">
+          <!-- <li class="py-1.5 px-4 text-white bg-gray-700 rounded-2xl">All</li>
+                <li class="py-1.5 px-4 text-white bg-gray-700 rounded-2xl">All</li>
+                <li class="py-1.5 px-4 text-white bg-gray-700 rounded-2xl">All</li>
+                <li class="py-1.5 px-4 text-white bg-gray-700 rounded-2xl">All</li> -->
+        </ul>
+      </div>
+    </div>
+    <div class="w-[85%] m-auto">
+      <h1 class="text-white font-bold text-3xl mt-5">Popular Now Page <span id="page"></span></h1>
+      <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 gap-5" id="card">
+        <!-- <div class="h-[520px] border border-white rounded-xl hover:border-red-500 hover:-translate-y-2.5 cursor-pointer transition-all duration-200 overflow-hidden">
+          <img class="w-full h-[60%] object-cover rounded-xl" src="https://i.pinimg.com/736x/75/89/3c/75893cb6322a2a95c5038cf17eadf70b.jpg" alt="">
+          <div class="px-4 text-white flex flex-col gap-2.5">
+            <h1 class="font-bold text-2xl mt-2.5">Worldwild Realease</h1>
+            <span >8.88/10</span>
+            <span>When a young boy vanishes, a small town uncovers a mystery involing</span>
+            <div class="w-full flex justify-between mt-3">
+              <button class="w-[49%] border p-2 rounded-xl  bg-blue-400"> watch</button>
+              <button class="w-[49%] border p-2 rounded-xl">save</button>
+            </div>
+          </div>
+        </div> -->
+        </div>
+      </div>
+    </div>
+    <div class="text-white flex justify-between w-[70%] mx-auto mt-5">
+      <button id="btn_previous" class="py-1 px-2 sm:py-3 sm:px-7 border border-white rounded-md bg-blue-500 cursor-pointer hover:-translate-y-1"><i class="fa-solid fa-backward-step"></i>Previous</button>
+      <button id="btn_next" class="py-1 px-2 sm:py-3 sm:px-7 border border-white rounded-md bg-red-500 cursor-pointer hover:-translate-y-1">Next<i class="fa-solid fa-forward-step"></i></button>
+    </div>
+  </body>
+</html>
+<script src="app.js"></script>
